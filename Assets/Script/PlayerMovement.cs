@@ -5,33 +5,32 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     
-    // MOVEMENT VARIABLES
+    // MOVEMENT VARIABLES (BASIC VARIABLES NEEDED FOR MOVEMENT)
     private float horizontalInput;
     private float speed = 8.0f;
-    private float jumpingPower = 12.0f;
+    private float jumpPower = 12.0f;
+
     private bool isFacingRight = true;
 
-    // COYOTE TIME VARIABLES
+    // COYOTE TIME & JUMP BUFFERING VARIABLES (INVISIBLE TRICKS THAT HELP MAKE THE PLATFORMING MORE ENJOYABLE)
     private float coyoteTime = 0.2f;
     private float coyoteTimeCounter;
 
-    // JUMP BUFFERING VARIABLES
     private float jumpBufferTime = 0.2f;
     private float jumpBufferCounter;
 
-    // WALL SLIDING VARIABLES
+    // WALL SLIDING & WALL JUMPING VARIABLES (FIRST MECHANIC // WILL BE USED IN PLATFORMING FOR VARIETY)
     private bool isWallSliding;
-    private float wallSlidingSpeed = 2f;
+    private float wallSlideSpeed = 2f;
 
-    // WALL JUMPING VARIABLES
     private bool isWallJumping;
-    private float wallJumpingDirection;
-    private float wallJumpingTime = 0.2f;
-    private float wallJumpingCounter;
-    private float wallJumpingDuration = 0.4f;
-    private Vector2 wallJumpingPower = new Vector2(8f, 12f);
+    private float wallJumpDirection;
+    private float wallJumpTime = 0.2f;
+    private float wallJumpCounter;
+    private float wallJumpDuration = 0.4f;
+    private Vector2 wallJumpPower = new Vector2(8f, 12f);
 
-    // SERIALIZEFIELDS
+    
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -41,63 +40,52 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        
+        // DETECTS HORIZONTAL INPUT
         horizontalInput = Input.GetAxisRaw("Horizontal");
 
+        // CHECKS TO SEE IF PLAYER IS GROUNDED; COYOTE TIME AND JUMP BUFFERING ALLOW FOR MORE LENIENT AND RESPONSIVE PLATFORMING
         if (IsGrounded()) 
         {
-        
             coyoteTimeCounter = coyoteTime;
-
         }
         else 
         {
-        
             coyoteTimeCounter -= Time.deltaTime;
-
         }
         
         if (Input.GetKeyDown(KeyCode.W)) 
-        {
-        
-            jumpBufferCounter = jumpBufferTime;
-        
+        {       
+            jumpBufferCounter = jumpBufferTime;       
         }
         else
-        {
-        
+        {      
             jumpBufferCounter -= Time.deltaTime;
-
         }
 
+        // IF PLAYER IS GROUNDED, ALLOWS THEM TO JUMP. IF COYOTE TIME COUNTER AND JUMP BUFFER COUNTER ARE GREATER THEN 0, ALLOWS PLAYER TO JUMP EVEN WHILE OFF THE GROUND
         if (jumpBufferCounter > 0f && coyoteTimeCounter > 0f) 
         {
-        
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        
+            rb.velocity = new Vector2(rb.velocity.x, jumpPower);       
         }
 
+
         if (Input.GetKeyUp(KeyCode.W) && rb.velocity.y > 0f)
-        {
-        
+        {       
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
 
             coyoteTimeCounter = 0f;
             jumpBufferCounter = 0f;
-
         }
 
+        // CALLS WALL SLIDING AND WALL JUMPING FUNCTIONS TO ALLOW THEM TO WORK
         WallSlide();
         WallJump();
 
+        // FLIPS THE CHARACTER (WHICH IS USED FOR MOVEMENT AND WALL JUMPING)
         if(!isWallJumping) 
-        {
-        
+        {        
             Flip();
-
         }
-
-        
 
     }
 
@@ -105,6 +93,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate() 
     {
     
+        // LEFT AND RIGHT MOVEMENT. BASIC STUFF
         if(!isWallJumping) 
         {
         
@@ -115,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-
+    // CHECKS IF THE PLAYER IS GROUNDED USING AN EMPTY OBJECT THAT IS CONNECTED TO THE BOTTOM OF THE PLAYER
     private bool IsGrounded() 
     {
     
@@ -123,23 +112,24 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-
-    private bool IsWalled() 
+    // CHECKS IF THE PLAYER IS HUGGING A WALL USING AN EMPTY OBJECT THAT IS CONNECTED TO THE RIGHT OF THE PLAYER (THIS OBJECT FLIPS TO THE LEFT USING THE FLIP FUNCTION)
+    private bool IsOnWall() 
     {
     
         return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
 
     }
 
-
+    // FUNCTION FOR THE WALL SLIDE
     private void WallSlide() 
     {
     
-        if (IsWalled() && !IsGrounded() && horizontalInput != 0f) 
+        // CHECKS IF PLAYER IS HUGGING WALL AND IS NOT GROUNDED, HALVING THE SPEED OF THEIR DESCENT AS LONG AS THEY ARE HUGGING THE WALL
+        if (IsOnWall() && !IsGrounded() && horizontalInput != 0f) 
         {
         
             isWallSliding = true;
-            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
+            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlideSpeed, float.MaxValue));
 
         }
         else 
@@ -151,16 +141,17 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-
+    // FUNCTION FOR THE WALL JUMP
     private void WallJump() 
     {
     
+        // CHECKS IF THE PLAYER IS WALL SLIDING. IF THEY ARE, THEY CAN JUMP OFF THE WALL, FLIPPING THEM AND APPLYING THE STANDARD JUMP FORCE
         if (isWallSliding) 
         {
         
             isWallJumping = false;
-            wallJumpingDirection = -transform.localScale.x;
-            wallJumpingCounter = wallJumpingTime;
+            wallJumpDirection = -transform.localScale.x;
+            wallJumpCounter = wallJumpTime;
 
             CancelInvoke(nameof(StopWallJumping));
 
@@ -168,18 +159,18 @@ public class PlayerMovement : MonoBehaviour
         else 
         {
         
-            wallJumpingCounter -= Time.deltaTime;
+            wallJumpCounter -= Time.deltaTime;
 
         }
 
-        if (Input.GetKeyDown(KeyCode.W) && wallJumpingCounter > 0f) 
+        if (Input.GetKeyDown(KeyCode.W) && wallJumpCounter > 0f) 
         {
             
             isWallJumping = true;
-            rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
-            wallJumpingCounter = 0f;
+            rb.velocity = new Vector2(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
+            wallJumpCounter = 0f;
 
-            if (transform.localScale.x != wallJumpingDirection) 
+            if (transform.localScale.x != wallJumpDirection) 
             {
             
                 isFacingRight = !isFacingRight;
@@ -189,12 +180,13 @@ public class PlayerMovement : MonoBehaviour
             
             }
 
-            Invoke(nameof(StopWallJumping), wallJumpingDuration);
+            Invoke(nameof(StopWallJumping), wallJumpDuration);
         
         }
     
     }
 
+    // USED TO PREVENT THE PLAYER FROM CONSTANTLY WALL JUMPING
     private void StopWallJumping() 
     {
     
@@ -202,7 +194,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-
+    // FLIPS THE PLAYER. PRETTY SELF-EXPLANATORY
     private void Flip() 
     {
     
