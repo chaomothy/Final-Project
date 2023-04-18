@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     // MOVEMENT VARIABLES (BASIC VARIABLES NEEDED FOR MOVEMENT)
     private float horizontalInput;
     private float speed = 8.0f;
+    private float maxSpeed = 14.0f;
     private float jumpPower = 12.0f;
     private bool isFacingRight = true;
 
@@ -31,11 +32,11 @@ public class PlayerMovement : MonoBehaviour
 
     // DASHING VARIABLES (SECOND MECHANIC // SAME AS ABOVE)
     private bool canDash = true;
-    private bool isDashing;
+    public bool isDashing;
     private float dashingPower = 24f;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
-
+    private Vector2 dashingDir;
     
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private TrailRenderer tr;
@@ -54,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
     
         // DETECTS HORIZONTAL INPUT
         horizontalInput = Input.GetAxisRaw("Horizontal");
+
 
         // CHECKS TO SEE IF PLAYER IS GROUNDED; COYOTE TIME AND JUMP BUFFERING ALLOW FOR MORE LENIENT AND RESPONSIVE PLATFORMING
         if (IsGrounded()) 
@@ -80,13 +82,20 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);       
         }
 
-
         if (Input.GetKeyUp(KeyCode.W) && rb.velocity.y > 0f)
         {       
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
 
             coyoteTimeCounter = 0f;
             jumpBufferCounter = 0f;
+        }
+
+        // IF THE PLAYER IS MOVING FASTER THEN THE MAXIMUM VELOCITY OR IF THE PLAYER IS FALLING, CAP THEIR SPEED AT THE MAX SPEED (CLAMPED FALLING SPEED FOR PLATFORMING)
+        if (rb.velocity.y > maxSpeed || rb.velocity.y < 0) 
+        {
+        
+            rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxSpeed);
+
         }
 
         // CALLS WALL SLIDING AND WALL JUMPING FUNCTIONS TO ALLOW THEM TO WORK
@@ -211,7 +220,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-
+    // FUNCTION FOR THE DASHING MECHANIC; TAKES THE PLAYERS HORIZONTAL AND VERTICAL INPUTS AND COMBINES THEM INTO THE DASHING DIRECTION
     private IEnumerator Dash () 
     {
         canDash = false;
@@ -220,8 +229,19 @@ public class PlayerMovement : MonoBehaviour
 
         isDashing = true;
         rb.gravityScale = 0f;
-        rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         tr.emitting = true;
+
+        dashingDir = new Vector2 (Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        // IF NO DIRECTION IS BEING HELD, THE DASH WILL GO STRAIGHT FORA
+        if (dashingDir == Vector2.zero)
+        {
+        
+            dashingDir = new Vector2(transform.localScale.x, 0);
+
+        }
+
+        rb.velocity = dashingDir.normalized * dashingPower;
 
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
