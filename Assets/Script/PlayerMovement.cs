@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter -= Time.deltaTime;
         }
         
-        if (Input.GetKeyDown(KeyCode.W)) 
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) 
         {       
             jumpBufferCounter = jumpBufferTime;       
         }
@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);       
         }
 
-        if (Input.GetKeyUp(KeyCode.W) && rb.velocity.y > 0f)
+        if (Input.GetKeyUp(KeyCode.W) && rb.velocity.y > 0f || Input.GetKeyUp(KeyCode.UpArrow) && rb.velocity.y > 0f)
         {       
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
 
@@ -179,7 +179,7 @@ public class PlayerMovement : MonoBehaviour
             wallJumpCounter -= Time.deltaTime;
         }
 
-        if (Input.GetKeyDown(KeyCode.W) && wallJumpCounter > 0f) 
+        if (Input.GetKeyDown(KeyCode.W) && wallJumpCounter > 0f || Input.GetKeyDown(KeyCode.UpArrow) && wallJumpCounter > 0f) 
         {           
             isWallJumping = true;
             rb.velocity = new Vector2(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
