@@ -90,8 +90,8 @@ public class PlayerMovement : MonoBehaviour
             jumpBufferCounter = 0f;
         }
 
-        // IF THE PLAYER IS MOVING FASTER THEN THE MAXIMUM VELOCITY OR IF THE PLAYER IS FALLING, CAP THEIR SPEED AT THE MAX SPEED (CLAMPED FALLING SPEED FOR PLATFORMING)
-        if (rb.velocity.y > maxSpeed || rb.velocity.y < 0) 
+        // IF THE PLAYER IS FALLING, CAP THEIR SPEED AT THE MAX SPEED (CLAMPED FALLING SPEED FOR PLATFORMING)
+        if (rb.velocity.y < 0) 
         {
         
             rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxSpeed);
@@ -247,6 +247,8 @@ public class PlayerMovement : MonoBehaviour
         tr.emitting = false;
         rb.gravityScale = originalGravity;
         isDashing = false;
+
+        rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxSpeed);
 
         yield return new WaitForSeconds(dashingCooldown);
         
