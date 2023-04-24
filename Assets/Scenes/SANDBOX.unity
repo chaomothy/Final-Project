@@ -598,22 +598,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 58533273}
     m_Modifications:
-    - target: {fileID: 5417531285733299626, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5417531286314708145, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6787292881575758497, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6787292881628651144, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6787292881815041805, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -661,10 +645,6 @@ PrefabInstance:
     - target: {fileID: 6787292881815041810, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: m_Name
       value: SPIKE SET2 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6787292882075266227, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
@@ -1521,7 +1501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6956569701917753900, guid: 20b61dbaaf30c0c4e93c9f06caf00e9f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.28
+      value: 4.35
       objectReference: {fileID: 0}
     - target: {fileID: 6956569701917753900, guid: 20b61dbaaf30c0c4e93c9f06caf00e9f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1554,10 +1534,6 @@ PrefabInstance:
     - target: {fileID: 6956569701917753900, guid: 20b61dbaaf30c0c4e93c9f06caf00e9f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6956569701917753903, guid: 20b61dbaaf30c0c4e93c9f06caf00e9f, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20b61dbaaf30c0c4e93c9f06caf00e9f, type: 3}
@@ -3168,14 +3144,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 58533273}
     m_Modifications:
-    - target: {fileID: 1522145111476732226, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1522145111557018987, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1522145111673683182, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3186,7 +3154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1522145111673683182, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.04
+      value: 10.16
       objectReference: {fileID: 0}
     - target: {fileID: 1522145111673683182, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3223,10 +3191,6 @@ PrefabInstance:
     - target: {fileID: 1522145111673683185, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
       propertyPath: m_Name
       value: SPIKE SET 1 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1522145111915718480, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
@@ -3802,14 +3766,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 58533273}
     m_Modifications:
-    - target: {fileID: 1522145111476732226, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1522145111557018987, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1522145111673683182, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3857,10 +3813,6 @@ PrefabInstance:
     - target: {fileID: 1522145111673683185, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
       propertyPath: m_Name
       value: SPIKE SET 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1522145111915718480, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
@@ -3928,22 +3880,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 58533273}
     m_Modifications:
-    - target: {fileID: 5417531285733299626, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5417531286314708145, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6787292881575758497, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6787292881628651144, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6787292881815041805, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3991,10 +3927,6 @@ PrefabInstance:
     - target: {fileID: 6787292881815041810, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: m_Name
       value: SPIKE SET2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6787292882075266227, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
@@ -4052,10 +3984,6 @@ PrefabInstance:
     - target: {fileID: 6956569701917753900, guid: 20b61dbaaf30c0c4e93c9f06caf00e9f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6956569701917753903, guid: 20b61dbaaf30c0c4e93c9f06caf00e9f, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20b61dbaaf30c0c4e93c9f06caf00e9f, type: 3}
