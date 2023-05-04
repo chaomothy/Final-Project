@@ -109,7 +109,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0.24056602, b: 0.24056602, a: 1}
   m_FlipX: 0
@@ -191,6 +191,9 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 128
+  sprite: {fileID: 2193108341546800502}
+  normalColor: {r: 1, g: 0.2392157, b: 0.2392157, a: 1}
+  dashedColor: {r: 0.7647059, g: 0.18431373, b: 0.18431373, a: 1}
 --- !u!96 &659138321
 TrailRenderer:
   serializedVersion: 2
@@ -263,7 +266,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.2392157, b: 0.2392157, a: 1}
+      key0: {r: 0.7647059, g: 0.18431373, b: 0.18431373, a: 1}
       key1: {r: 1, g: 0.2392157, b: 0.2392157, a: 0.39215687}
       key2: {r: 1, g: 0.2392157, b: 0.2392157, a: 0.15686275}
       key3: {r: 0, g: 0, b: 0, a: 0.15686275}

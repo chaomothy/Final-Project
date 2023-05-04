@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6956569701917753890}
   m_Layer: 0
   m_Name: Spring
-  m_TagString: Untagged
+  m_TagString: Spring
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteShapeRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Color: {r: 1, g: 0.504717, b: 0.504717, a: 1}
   m_MaskInteraction: 0
   m_ShapeTexture: {fileID: 2800000, guid: b281b91a70a624a0da1c43adc1c30c7b, type: 3}

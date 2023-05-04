@@ -35,7 +35,6 @@ public class PlayerMovement : MonoBehaviour
     public bool isDashing;
     private float dashingPower = 24f;
     private float dashingTime = 0.2f;
-    private float dashingCooldown = 1f;
     private Vector2 dashingDir;
     
     [SerializeField] private Rigidbody2D rb;
@@ -44,8 +43,20 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
+    [SerializeField] private SpriteRenderer sprite;
+
+    public Color normalColor;
+    public Color dashedColor;
 
 
+    void Start() 
+    {
+    
+        sprite = GetComponent<SpriteRenderer>();
+        sprite.color = normalColor;
+
+    }
+    
     void Update()
     {
         if (isDashing)
@@ -61,6 +72,8 @@ public class PlayerMovement : MonoBehaviour
         if (IsGrounded()) 
         {
             coyoteTimeCounter = coyoteTime;
+            canDash = true;
+            sprite.color = normalColor;
         }
         else 
         {
@@ -223,7 +236,9 @@ public class PlayerMovement : MonoBehaviour
     // FUNCTION FOR THE DASHING MECHANIC; TAKES THE PLAYERS HORIZONTAL AND VERTICAL INPUTS AND COMBINES THEM INTO THE DASHING DIRECTION
     private IEnumerator Dash () 
     {
+    
         canDash = false;
+        sprite.color = dashedColor;
 
         float originalGravity = rb.gravityScale;
 
@@ -247,11 +262,22 @@ public class PlayerMovement : MonoBehaviour
         tr.emitting = false;
         rb.gravityScale = originalGravity;
         isDashing = false;
+        
 
         rb.velocity = Vector2.ClampMagnitude(rb.velocity, maxSpeed);
-
-        yield return new WaitForSeconds(dashingCooldown);
         
-        canDash = true;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
+    
+        if(other.gameObject.CompareTag("Spring")) 
+        {
+        
+            canDash = true;
+            sprite.color = normalColor;
+
+        }
+
     }
 }
