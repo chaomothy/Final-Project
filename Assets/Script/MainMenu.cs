@@ -27,5 +27,12 @@ public class MainMenu : MonoBehaviour
     
     }
 
+    public void ReturnToTitle()
+    {
+    
+        SceneManager.LoadScene(0);
+
+    }
+
 
 }
