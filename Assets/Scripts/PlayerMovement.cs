@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private float maxSpeed = 14.0f;
     private float jumpPower = 12.0f;
     private bool isFacingRight = true;
+    private bool hasJumped;
 
     // COYOTE TIME & JUMP BUFFERING VARIABLES (INVISIBLE TRICKS THAT HELP MAKE THE PLATFORMING MORE ENJOYABLE)
     private float coyoteTime = 0.2f;
@@ -36,6 +37,14 @@ public class PlayerMovement : MonoBehaviour
     private float dashingPower = 24f;
     private float dashingTime = 0.2f;
     private Vector2 dashingDir;
+    public Color normalColor;
+    public Color dashedColor;
+
+    
+    // SFX VARIABLES
+    public AudioClip jumpSound;
+    public AudioClip dashSound;
+    private AudioSource playerAudio;
     
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private TrailRenderer tr;
@@ -45,15 +54,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private SpriteRenderer sprite;
 
-    public Color normalColor;
-    public Color dashedColor;
 
 
     void Start() 
     {
     
         sprite = GetComponent<SpriteRenderer>();
+        playerAudio = GetComponent<AudioSource>();
+
         sprite.color = normalColor;
+        hasJumped = false;
 
     }
     
@@ -74,26 +84,42 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter = coyoteTime;
             canDash = true;
             sprite.color = normalColor;
+            hasJumped = false;
         }
         else 
         {
             coyoteTimeCounter -= Time.deltaTime;
+            hasJumped = true;
+
         }
         
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) 
         {       
-            jumpBufferCounter = jumpBufferTime;       
+            jumpBufferCounter = jumpBufferTime;
+            hasJumped = true;
         }
         else
         {      
             jumpBufferCounter -= Time.deltaTime;
+            hasJumped = false;
+            
         }
 
         // IF PLAYER IS GROUNDED, ALLOWS THEM TO JUMP. IF COYOTE TIME COUNTER AND JUMP BUFFER COUNTER ARE GREATER THEN 0, ALLOWS PLAYER TO JUMP EVEN WHILE OFF THE GROUND
         if (jumpBufferCounter > 0f && coyoteTimeCounter > 0f) 
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpPower);       
+            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+            
+            if(!hasJumped && !playerAudio.isPlaying)
+            {
+            
+                playerAudio.PlayOneShot(jumpSound, 0.5f);
+
+            }
+
         }
+
+        
 
         if (Input.GetKeyUp(KeyCode.W) && rb.velocity.y > 0f || Input.GetKeyUp(KeyCode.UpArrow) && rb.velocity.y > 0f)
         {       
@@ -197,6 +223,13 @@ public class PlayerMovement : MonoBehaviour
             isWallJumping = true;
             rb.velocity = new Vector2(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
             wallJumpCounter = 0f;
+
+            if(!playerAudio.isPlaying)
+            {
+            
+                playerAudio.PlayOneShot(jumpSound, 0.5f);
+
+            }
 
             if (transform.localScale.x != wallJumpDirection) 
             {

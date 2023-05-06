@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5417531285733299626}
   - component: {fileID: 5417531285733299627}
   - component: {fileID: 5417531285733299624}
-  - component: {fileID: 5417531285733299625}
   m_Layer: 0
   m_Name: Spike (1)
   m_TagString: Untagged
@@ -180,19 +179,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.3496094, y: 3.0159376}
   m_EdgeRadius: 0
---- !u!114 &5417531285733299625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5417531285733299623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a01cc5d26c38c1d4db77e43198632781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Respawn: 2
 --- !u!1 &5417531286314708138
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +191,6 @@ GameObject:
   - component: {fileID: 5417531286314708145}
   - component: {fileID: 5417531286314708142}
   - component: {fileID: 5417531286314708143}
-  - component: {fileID: 5417531286314708140}
   m_Layer: 0
   m_Name: Spike (2)
   m_TagString: Untagged
@@ -373,19 +358,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.3496094, y: 3.0159376}
   m_EdgeRadius: 0
---- !u!114 &5417531286314708140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5417531286314708138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a01cc5d26c38c1d4db77e43198632781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Respawn: 2
 --- !u!1 &6787292881575758506
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +370,6 @@ GameObject:
   - component: {fileID: 6787292881575758497}
   - component: {fileID: 6787292881575758502}
   - component: {fileID: 6787292881575758503}
-  - component: {fileID: 6787292881575758500}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Untagged
@@ -566,19 +537,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.3496094, y: 3.0159376}
   m_EdgeRadius: 0
---- !u!114 &6787292881575758500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6787292881575758506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a01cc5d26c38c1d4db77e43198632781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Respawn: 2
 --- !u!1 &6787292881628651149
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,7 +549,6 @@ GameObject:
   - component: {fileID: 6787292881628651144}
   - component: {fileID: 6787292881628651145}
   - component: {fileID: 6787292881628651150}
-  - component: {fileID: 6787292881628651151}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Untagged
@@ -759,19 +716,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.3496094, y: 3.0159376}
   m_EdgeRadius: 0
---- !u!114 &6787292881628651151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6787292881628651149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a01cc5d26c38c1d4db77e43198632781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Respawn: 2
 --- !u!1 &6787292881815041810
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,6 +725,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6787292881815041805}
+  - component: {fileID: 234351675270082574}
+  - component: {fileID: 6115873665963139950}
+  - component: {fileID: 1540095369960772558}
   m_Layer: 0
   m_Name: SPIKE SET2
   m_TagString: Untagged
@@ -808,6 +755,142 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &234351675270082574
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6787292881815041810}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0052256584, y: -0.7054355}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.062112, y: 0.90594244}
+  m_EdgeRadius: 0
+--- !u!114 &6115873665963139950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6787292881815041810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01cc5d26c38c1d4db77e43198632781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Respawn: 2
+  deathSound: {fileID: 8300000, guid: 15750930df0999f40889eee435164f26, type: 3}
+--- !u!82 &1540095369960772558
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6787292881815041810}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.2
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6787292882075266225
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,7 +903,6 @@ GameObject:
   - component: {fileID: 6787292882075266227}
   - component: {fileID: 6787292882075266224}
   - component: {fileID: 6787292882075266221}
-  - component: {fileID: 6787292882075266220}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Untagged
@@ -988,16 +1070,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.3496094, y: 3.0159376}
   m_EdgeRadius: 0
---- !u!114 &6787292882075266220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6787292882075266225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a01cc5d26c38c1d4db77e43198632781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Respawn: 2

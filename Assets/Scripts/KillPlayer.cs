@@ -19,6 +19,8 @@ public class KillPlayer : MonoBehaviour
         {
         
             // RESPAWNS THE PLAYER
+            
+            
             SceneManager.LoadScene(Respawn);
 
         }

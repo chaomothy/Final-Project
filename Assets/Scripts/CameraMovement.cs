@@ -16,7 +16,6 @@ public class CameraMovement : MonoBehaviour
 
     [SerializeField] private Transform target;
 
-
     void Update()
     {
         // CREATES A VECTOR3 FOR THE POSITION OF THE TARGET, AND USES THE OFFSET TO MAKE THE CAMERA FOLLOW SMOOTHLY BEHIND THE TARGET

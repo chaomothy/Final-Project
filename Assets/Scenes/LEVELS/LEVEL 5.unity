@@ -202,11 +202,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6956569701917753900, guid: 20b61dbaaf30c0c4e93c9f06caf00e9f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.58
+      value: 14.36
       objectReference: {fileID: 0}
     - target: {fileID: 6956569701917753900, guid: 20b61dbaaf30c0c4e93c9f06caf00e9f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 32.29
+      value: 31.720001
       objectReference: {fileID: 0}
     - target: {fileID: 6956569701917753900, guid: 20b61dbaaf30c0c4e93c9f06caf00e9f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -263,6 +263,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5417531286314708140, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
@@ -340,6 +344,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 221872990}
     m_Modifications:
+    - target: {fileID: 824842071728353993, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1522145111476732231, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
       propertyPath: Respawn
       value: 7
@@ -419,7 +427,7 @@ GameObject:
   - component: {fileID: 44181103}
   - component: {fileID: 44181102}
   m_Layer: 6
-  m_Name: Bg (17)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -530,6 +538,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5417531286314708140, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
@@ -848,7 +860,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138101422}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.7, y: 43, z: 0}
+  m_LocalPosition: {x: 15.94, y: 43, z: 0}
   m_LocalScale: {x: 17.814337, y: -0.6655126, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -945,6 +957,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5417531286314708140, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
@@ -1527,7 +1543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268316303}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.4, y: 12.919999, z: 0}
+  m_LocalPosition: {x: 18.4, y: 12.12, z: 0}
   m_LocalScale: {x: 2.4264843, y: -0.6655126, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1619,6 +1635,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 221872990}
     m_Modifications:
+    - target: {fileID: 824842071728353993, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1522145111476732231, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
       propertyPath: Respawn
       value: 7
@@ -1637,7 +1657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1522145111673683182, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.4
+      value: 17.6
       objectReference: {fileID: 0}
     - target: {fileID: 1522145111673683182, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1698,6 +1718,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5417531286314708140, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
@@ -1775,6 +1799,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 221872990}
     m_Modifications:
+    - target: {fileID: 824842071728353993, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1522145111476732231, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
       propertyPath: Respawn
       value: 7
@@ -1960,6 +1988,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 221872990}
     m_Modifications:
+    - target: {fileID: 824842071728353993, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1522145111476732231, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
       propertyPath: Respawn
       value: 7
@@ -2042,6 +2074,10 @@ PrefabInstance:
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6787292881575758500, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
@@ -2121,7 +2157,7 @@ GameObject:
   - component: {fileID: 357795240}
   - component: {fileID: 357795239}
   m_Layer: 6
-  m_Name: Bg (12)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2343,6 +2379,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5417531286314708140, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
@@ -2869,7 +2909,7 @@ GameObject:
   - component: {fileID: 478459093}
   - component: {fileID: 478459092}
   m_Layer: 6
-  m_Name: Bg (19)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3049,6 +3089,10 @@ PrefabInstance:
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6787292881575758500, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
@@ -3142,8 +3186,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514394674}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 25.36, y: 38.22, z: 0}
-  m_LocalScale: {x: 10.277743, y: -0.6655099, z: 1}
+  m_LocalPosition: {x: 24.52, y: 38.22, z: 0}
+  m_LocalScale: {x: 10.149272, y: -0.6655099, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1722459181}
@@ -3253,7 +3297,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527179386}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.87, y: 34.76, z: 0}
+  m_LocalPosition: {x: 25.650002, y: 34.19, z: 0}
   m_LocalScale: {x: 2.8232942, y: -0.6655126, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3794,7 +3838,7 @@ GameObject:
   - component: {fileID: 603329630}
   - component: {fileID: 603329629}
   m_Layer: 6
-  m_Name: Bg (4)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4290,7 +4334,7 @@ GameObject:
   - component: {fileID: 714632689}
   - component: {fileID: 714632688}
   m_Layer: 6
-  m_Name: Bg (20)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4396,6 +4440,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 221872990}
     m_Modifications:
+    - target: {fileID: 824842071728353993, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1522145111476732231, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
       propertyPath: Respawn
       value: 7
@@ -4489,7 +4537,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741094112}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 19.4, y: 15.029999, z: 0}
+  m_LocalPosition: {x: 19.4, y: 14.23, z: 0}
   m_LocalScale: {x: 4.857302, y: -0.66551256, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4621,7 +4669,7 @@ GameObject:
   - component: {fileID: 769928037}
   - component: {fileID: 769928036}
   m_Layer: 6
-  m_Name: Bg (13)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4727,6 +4775,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 221872990}
     m_Modifications:
+    - target: {fileID: 824842071728353993, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1522145111476732231, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
       propertyPath: Respawn
       value: 7
@@ -4920,6 +4972,10 @@ PrefabInstance:
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6787292881575758500, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
@@ -4994,6 +5050,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 221872990}
     m_Modifications:
+    - target: {fileID: 824842071728353993, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1522145111476732230, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
       propertyPath: m_LocalPosition.y
       value: 6.88
@@ -5145,6 +5205,10 @@ PrefabInstance:
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6787292881575758500, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
@@ -5219,6 +5283,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 221872990}
     m_Modifications:
+    - target: {fileID: 824842071728353993, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1522145111476732231, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
       propertyPath: Respawn
       value: 7
@@ -5474,6 +5542,10 @@ PrefabInstance:
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6787292881575758500, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
@@ -5553,6 +5625,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5417531286314708140, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
@@ -5982,7 +6058,7 @@ GameObject:
   - component: {fileID: 1046932359}
   - component: {fileID: 1046932358}
   m_Layer: 6
-  m_Name: Bg (14)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6204,7 +6280,7 @@ GameObject:
   - component: {fileID: 1081937594}
   - component: {fileID: 1081937593}
   m_Layer: 6
-  m_Name: Bg (11)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6429,6 +6505,10 @@ PrefabInstance:
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6787292881575758500, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
@@ -6619,7 +6699,7 @@ GameObject:
   - component: {fileID: 1144328980}
   - component: {fileID: 1144328979}
   m_Layer: 6
-  m_Name: Bg (18)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6633,7 +6713,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144328977}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.39, y: 15.14, z: 0}
+  m_LocalPosition: {x: 18.39, y: 14.340001, z: 0}
   m_LocalScale: {x: 2.1838944, y: -4.3235574, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6947,6 +7027,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 221872990}
     m_Modifications:
+    - target: {fileID: 824842071728353993, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1522145111476732231, guid: 25d71c6f9c452be4db729ec8d98b6588, type: 3}
       propertyPath: Respawn
       value: 7
@@ -7137,6 +7221,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5417531286314708140, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
@@ -7427,7 +7515,7 @@ GameObject:
   - component: {fileID: 1247310403}
   - component: {fileID: 1247310402}
   m_Layer: 6
-  m_Name: Bg (10)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7575,6 +7663,10 @@ PrefabInstance:
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6787292881575758500, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
@@ -7657,6 +7749,10 @@ PrefabInstance:
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6787292881575758500, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
@@ -7736,7 +7832,7 @@ GameObject:
   - component: {fileID: 1385070543}
   - component: {fileID: 1385070542}
   m_Layer: 6
-  m_Name: Bg (7)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7847,7 +7943,7 @@ GameObject:
   - component: {fileID: 1386727261}
   - component: {fileID: 1386727260}
   m_Layer: 6
-  m_Name: Bg (15)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8069,7 +8165,7 @@ GameObject:
   - component: {fileID: 1413132152}
   - component: {fileID: 1413132151}
   m_Layer: 6
-  m_Name: Bg (2)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8180,6 +8276,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5417531286314708140, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
@@ -8727,7 +8827,7 @@ GameObject:
   - component: {fileID: 1531825586}
   - component: {fileID: 1531825585}
   m_Layer: 6
-  m_Name: Bg (6)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9126,7 +9226,7 @@ GameObject:
   - component: {fileID: 1602075414}
   - component: {fileID: 1602075413}
   m_Layer: 6
-  m_Name: Bg (1)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9237,7 +9337,7 @@ GameObject:
   - component: {fileID: 1613781993}
   - component: {fileID: 1613781992}
   m_Layer: 6
-  m_Name: Bg (5)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9753,7 +9853,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762035350}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 17.27, y: 15.029999, z: 0}
+  m_LocalPosition: {x: 17.27, y: 14.23, z: 0}
   m_LocalScale: {x: 4.857302, y: -0.66551256, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9916,7 +10016,7 @@ GameObject:
   - component: {fileID: 1799146702}
   - component: {fileID: 1799146701}
   m_Layer: 6
-  m_Name: Bg (16)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10249,6 +10349,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5417531286314708140, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
@@ -10667,6 +10771,10 @@ PrefabInstance:
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6787292881575758500, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
@@ -10857,7 +10965,7 @@ GameObject:
   - component: {fileID: 1935213566}
   - component: {fileID: 1935213565}
   m_Layer: 6
-  m_Name: Bg (9)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10982,7 +11090,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988466115}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.4, y: 17.13, z: 0}
+  m_LocalPosition: {x: 18.4, y: 16.33, z: 0}
   m_LocalScale: {x: 2.4264843, y: -0.6655126, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11304,6 +11412,10 @@ PrefabInstance:
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6787292881575758500, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
@@ -11494,7 +11606,7 @@ GameObject:
   - component: {fileID: 2058276507}
   - component: {fileID: 2058276506}
   m_Layer: 6
-  m_Name: Bg (8)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11716,7 +11828,7 @@ GameObject:
   - component: {fileID: 2099688862}
   - component: {fileID: 2099688861}
   m_Layer: 6
-  m_Name: Bg (3)
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11938,6 +12050,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5417531286314708140, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
+      propertyPath: Respawn
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115873665963139950, guid: 3955a4738daeaf14db063ff54220ba86, type: 3}
       propertyPath: Respawn
       value: 7
       objectReference: {fileID: 0}
