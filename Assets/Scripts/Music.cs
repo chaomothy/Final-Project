@@ -5,12 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class Music : MonoBehaviour
 {
-    private AudioSource _audioSource;
+    public AudioSource _audioSource;
+    private static Music _instance;
     
 
     private void Awake()
     {
-         DontDestroyOnLoad(transform.gameObject);
+         
+        if(!_instance)
+        {
+        
+            _instance = this;
+
+        }
+        else
+        {
+        
+            Destroy(this.gameObject);
+
+        }
+        
+        
+        DontDestroyOnLoad(transform.gameObject);
          _audioSource = GetComponent<AudioSource>();
     }
  

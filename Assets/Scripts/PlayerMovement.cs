@@ -54,13 +54,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private SpriteRenderer sprite;
 
-
+    private Shake shake;
 
     void Start() 
     {
     
         sprite = GetComponent<SpriteRenderer>();
         playerAudio = GetComponent<AudioSource>();
+        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
 
         sprite.color = normalColor;
         hasJumped = false;
@@ -224,12 +225,9 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
             wallJumpCounter = 0f;
 
-            if(!playerAudio.isPlaying)
-            {
             
-                playerAudio.PlayOneShot(jumpSound, 0.5f);
+            playerAudio.PlayOneShot(jumpSound, 0.5f);
 
-            }
 
             if (transform.localScale.x != wallJumpDirection) 
             {
@@ -272,6 +270,8 @@ public class PlayerMovement : MonoBehaviour
     
         canDash = false;
         sprite.color = dashedColor;
+        playerAudio.PlayOneShot(dashSound, 1.0f);
+        shake.CamShake();
 
         float originalGravity = rb.gravityScale;
 
