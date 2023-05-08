@@ -97,12 +97,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) 
         {       
             jumpBufferCounter = jumpBufferTime;
-            hasJumped = true;
+            hasJumped = false;
         }
         else
         {      
             jumpBufferCounter -= Time.deltaTime;
-            hasJumped = false;
+            hasJumped = true;
             
         }
 
@@ -111,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
             
-            if(!hasJumped && !playerAudio.isPlaying)
+            if(hasJumped && !playerAudio.isPlaying)
             {
             
                 playerAudio.PlayOneShot(jumpSound, 0.5f);

@@ -197,7 +197,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   sprite: {fileID: 2193108341546800502}
-  cameraShake: {fileID: 5820998091449609417, guid: 004ed40bfba076b478ccae7444beb355, type: 3}
 --- !u!96 &659138321
 TrailRenderer:
   serializedVersion: 2
