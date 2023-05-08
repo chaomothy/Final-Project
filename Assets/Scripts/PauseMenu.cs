@@ -10,7 +10,7 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
-    public AudioSource music;
+    private AudioSource music;
     
     
     void Start()

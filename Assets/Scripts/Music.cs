@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Music : MonoBehaviour
 {
-    public AudioSource _audioSource;
+    private AudioSource _audioSource;
     private static Music _instance;
     
 
