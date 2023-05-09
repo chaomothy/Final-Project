@@ -71,6 +71,7 @@ public class PauseMenu : MonoBehaviour
     
         SceneManager.LoadScene(0);
         GameIsPaused = false;
+        Time.timeScale = 1f;
         music.pitch = 1.0f;
         music.volume = 0.05f;
         
@@ -81,6 +82,7 @@ public class PauseMenu : MonoBehaviour
     
         SceneManager.LoadScene(1);
         GameIsPaused = false;
+        Time.timeScale = 1f;
         music.pitch = 1.0f;
         music.volume = 0.05f;
 
